@@ -1,14 +1,11 @@
 package me.dio.model;
-import java.math.BigDecimal;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 
-@Entity(name = "funcionarios")
+@Entity(name = "tb_funcionarios")
 public class Funcionario {
 
     @Id
@@ -16,8 +13,8 @@ public class Funcionario {
     private Long id;
     private String nome;
     private String cargo;
-    @Column(name = "salario", nullable = false, precision = 10, scale = 2)
-    private BigDecimal salario;
+    
+    private Double salario;
 
     public Long getId() {
         return id;
@@ -43,11 +40,11 @@ public class Funcionario {
         this.cargo = cargo;
     }
 
-    public BigDecimal getSalario() {
+    public Double getSalario() {
         return salario;
     }
 
-    public void setSalario(BigDecimal salario) {
+    public void setSalario(Double salario) {
         this.salario = salario;
     }
 

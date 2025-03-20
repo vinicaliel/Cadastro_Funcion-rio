@@ -12,24 +12,26 @@ import me.dio.service.FuncionarioService;
 @Service
 public class FuncionarioServiceImpl implements FuncionarioService {
 
-    private FuncionarioRepository funcionarioRepository;
+    private final FuncionarioRepository funcionarioRepository;
 
     public FuncionarioServiceImpl(FuncionarioRepository funcionarioRepository) {
         this.funcionarioRepository = funcionarioRepository;
     }
     
-
+    @Override
     public Funcionario findById(Long id) {
         return funcionarioRepository.findById(id).orElseThrow(NoSuchElementException::new);
 
 
 
     }
-
+    @Override
     public Funcionario create(Funcionario funcionarioToCreate) {
-        if(funcionarioToCreate.getId() !=null){
-            throw new IllegalArgumentException("O id do funcionário não deve ser informado.");
-        }
+
+    
+        // Log para depuração
+        System.out.println("Criando funcionário: " + funcionarioToCreate);
+    
         return funcionarioRepository.save(funcionarioToCreate);
     }
 }
