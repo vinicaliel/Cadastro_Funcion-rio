@@ -8,4 +8,6 @@ public interface DepartamentService {
 
     Departamento create(Departamento departamentToCreate);
 
+    Departamento Delete(Long id);
+
 }

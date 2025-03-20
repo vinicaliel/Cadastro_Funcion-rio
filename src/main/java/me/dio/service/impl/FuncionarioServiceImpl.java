@@ -34,4 +34,12 @@ public class FuncionarioServiceImpl implements FuncionarioService {
     
         return funcionarioRepository.save(funcionarioToCreate);
     }
+
+    @Override
+    public Funcionario Delete(Long id) {
+        Funcionario funcionarioToDelete = funcionarioRepository.findById(id)
+            .orElseThrow(() -> new NoSuchElementException("Funcionário não encontrado com o ID: " + id));
+        funcionarioRepository.deleteById(id);
+        return funcionarioToDelete;
+    }
 }

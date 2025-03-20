@@ -9,5 +9,7 @@ Funcionario findById(Long id);
 
 Funcionario create(Funcionario funcionarioToCreate);
 
+Funcionario Delete(Long id);
+
 
 }

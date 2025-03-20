@@ -35,4 +35,12 @@ public class DepartamentoServiceImpl implements DepartamentService {
     
         return departamentRepository.save(departamentToCreate);
     }
+
+    @Override
+    public Departamento Delete(Long id) {
+        Departamento DepartamentoToDelete = departamentRepository.findById(id)
+            .orElseThrow(() -> new NoSuchElementException("Departamento não encontrado com o ID: " + id));
+            departamentRepository.deleteById(id);
+        return DepartamentoToDelete;
+    }
 }
