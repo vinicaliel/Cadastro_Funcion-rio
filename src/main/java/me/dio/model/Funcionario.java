@@ -1,20 +1,27 @@
 package me.dio.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
+import java.math.BigDecimal;
+import jakarta.persistence.*;
 
-@Entity(name = "tb_funcionarios")
+@Entity(name = "funcionarios")
 public class Funcionario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     private String nome;
     private String cargo;
     
-    private Double salario;
+    @Column(name = "salario", nullable = false, precision = 13, scale = 2)
+    private BigDecimal salario;
+
+    @ManyToOne
+    @JoinColumn(name = "departamento_id")
+    private Departamento departamento;
+
+    @OneToOne(mappedBy = "funcionario", cascade = CascadeType.ALL)
+    private Endereco endereco;
 
     public Long getId() {
         return id;
@@ -40,13 +47,27 @@ public class Funcionario {
         this.cargo = cargo;
     }
 
-    public Double getSalario() {
+    public BigDecimal getSalario() {
         return salario;
     }
 
-    public void setSalario(Double salario) {
+    public void setSalario(BigDecimal salario) {
         this.salario = salario;
     }
 
+    public Departamento getDepartamento() {
+        return departamento;
+    }
 
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
 }
