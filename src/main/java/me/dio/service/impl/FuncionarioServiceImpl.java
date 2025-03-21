@@ -20,19 +20,16 @@ public class FuncionarioServiceImpl implements FuncionarioService {
     
     @Override
     public Funcionario findById(Long id) {
-        return funcionarioRepository.findById(id).orElseThrow(NoSuchElementException::new);
-
-
+        Funcionario funcionarioToFind = funcionarioRepository.findById(id).orElseThrow(NoSuchElementException::new);
+        return funcionarioToFind;
 
     }
     @Override
     public Funcionario create(Funcionario funcionarioToCreate) {
-
+        
+        Funcionario funcionarioCadastrado = funcionarioRepository.save(funcionarioToCreate);
     
-        // Log para depuração
-        System.out.println("Criando funcionário: " + funcionarioToCreate);
-    
-        return funcionarioRepository.save(funcionarioToCreate);
+        return funcionarioRepository.save(funcionarioCadastrado);
     }
 
     @Override

@@ -29,9 +29,8 @@ public class DepartamentoServiceImpl implements DepartamentService {
     @Override
     public Departamento create(Departamento departamentToCreate) {
 
-    
-        // Log para depuração
-        System.out.println("Criando funcionário: " + departamentToCreate);
+  
+        System.out.println("Criando Departamento: " + departamentToCreate);
     
         return departamentRepository.save(departamentToCreate);
     }

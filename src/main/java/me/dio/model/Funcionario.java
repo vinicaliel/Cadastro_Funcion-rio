@@ -20,7 +20,7 @@ public class Funcionario {
     @JoinColumn(name = "departamento_id")
     private Departamento departamento;
 
-    @OneToOne(mappedBy = "funcionario", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "funcionario", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Endereco endereco;
 
     public Long getId() {

@@ -42,9 +42,7 @@ public ResponseEntity<Funcionario> create(@Valid @RequestBody Funcionario funcio
                 .path("/{id}")
                 .buildAndExpand(FuncionarioCadastrado.getId())
                 .toUri();
-                return ResponseEntity.created(location).body(FuncionarioCadastrado);
-
-    
+                return ResponseEntity.created(location).body(FuncionarioCadastrado);  
 }
 
 @DeleteMapping("/{id}")
