@@ -65,7 +65,7 @@ Este projeto é uma **API REST** desenvolvida em **Java** utilizando o framework
 ### **Departamentos**
 - `POST /departamentos` - Criar um novo departamento.
 - `GET /departamentos/{id}` - Buscar um departamento pelo ID.
-- `GET /departamentos/{id}/funcionarios` - Listar os funcionários associados a um departamento.
+- `GET /departamentos/{id}/funcionarios` - Listar os funcionários associados a um departamento. (Ainda Será Implementado
 
 ### **Endereços**
 - Associado automaticamente ao criar ou atualizar um funcionário.
