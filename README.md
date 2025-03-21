@@ -189,14 +189,13 @@ O projeto utiliza um **manipulador global** para tratar exceções e retornar me
 
 - Implementar **autenticação e autorização** com **Spring Security**.
 - Adicionar **paginação e ordenação** nos endpoints de listagem.
-- Migrar para um banco de dados relacional em produção (**PostgreSQL** ou **MySQL**).
 - Criar **testes unitários e de integração** para garantir a qualidade do código.
 
 ---
 
 ## 👨‍💼 Autor
 
-Projeto desenvolvido por **[Seu Nome]**.
+Projeto desenvolvido por **[Caliel Passos]**.
 
 - 📧 E-mail: [caliel1023@yahoo.com]
 - 👤 GitHub: [https://github.com/vinicaliel]
