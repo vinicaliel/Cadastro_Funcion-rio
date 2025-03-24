@@ -39,4 +39,17 @@ public class FuncionarioServiceImpl implements FuncionarioService {
         funcionarioRepository.deleteById(id);
         return funcionarioToDelete;
     }
+
+    @Override
+    public Funcionario Update(Long id, Funcionario funcionarioToUpdate) {
+        Funcionario existingFuncionario = funcionarioRepository.findById(id)
+            .orElseThrow(() -> new NoSuchElementException("Funcionário não encontrado com o ID: " + id));
+        
+        existingFuncionario.setNome(funcionarioToUpdate.getNome());
+        existingFuncionario.setCargo(funcionarioToUpdate.getCargo());
+        existingFuncionario.setSalario(funcionarioToUpdate.getSalario());
+        // Add other fields to update as needed
+
+        return funcionarioRepository.save(existingFuncionario);
+    }
 }

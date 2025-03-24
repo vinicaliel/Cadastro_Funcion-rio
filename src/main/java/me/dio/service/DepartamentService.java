@@ -10,4 +10,6 @@ public interface DepartamentService {
 
     Departamento Delete(Long id);
 
+    Departamento Update(Long id, Departamento departamentToUpdate);
+
 }

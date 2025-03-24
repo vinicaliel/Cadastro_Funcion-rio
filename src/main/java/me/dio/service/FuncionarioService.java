@@ -11,5 +11,6 @@ Funcionario create(Funcionario funcionarioToCreate);
 
 Funcionario Delete(Long id);
 
+Funcionario Update(Long id, Funcionario funcionarioToUpdate);
 
 }
