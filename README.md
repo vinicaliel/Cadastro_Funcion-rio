@@ -59,13 +59,13 @@ Este projeto é uma **API REST** desenvolvida em **Java** utilizando o framework
 ### **Funcionários**
 - `POST /funcionarios` - Criar um novo funcionário.
 - `GET /funcionarios/{id}` - Buscar um funcionário pelo ID.
-- `DELETE /funcionarios/{id}` - Deletar um funcionário pelo ID.(Ainda será Implementado)
-- `UPDATE /funcionarios/{id}` - Atualizar um funcionário pelo ID.(Ainda será Implementado)
+- `DELETE /funcionarios/{id}` - Deletar um funcionário pelo ID.
+- `UPDATE /funcionarios/{id}` - Atualizar um funcionário pelo ID.
 
 ### **Departamentos**
 - `POST /departamentos` - Criar um novo departamento.
 - `GET /departamentos/{id}` - Buscar um departamento pelo ID.
-- `GET /departamentos/{id}/funcionarios` - Listar os funcionários associados a um departamento. (Ainda Será Implementado
+- `GET /departamentos/{id}/funcionarios` - Listar os funcionários associados a um departamento. (Ainda Será Implementado)
 
 ### **Endereços**
 - Associado automaticamente ao criar ou atualizar um funcionário.
